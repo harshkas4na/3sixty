@@ -64,7 +64,7 @@
     background-color: #0056b3;
   }
   
-  .signup-form button[type="button"] {
+  .Linkbtn {
     background-color: #ccc;
     color: #333;
     padding: 10px;
@@ -74,7 +74,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .signup-form button[type="button"]:hover {
+  .Linkbtn:hover {
     background-color: #999;
   }
   

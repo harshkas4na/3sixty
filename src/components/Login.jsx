@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../components_css/Login.css';
 import Home from "./Home";
 
@@ -12,7 +12,7 @@ function Login({ toggleForm }) {
   });
   const [users,setUsers]=useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -23,16 +23,16 @@ function Login({ toggleForm }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your login logic here
+   
     const { username, password } = formData;
 
-    // Replace this with actual login logic that checks username and password
+    
     const isUserValid = users.some((user) => user.username === username && user.password === password);
 
     if (isUserValid) {
       // Redirect to the Home component upon successful login
-      console.log("oKayz h ji");
-      // navigate.push('/');
+      
+      navigate.push('/Home');
       setIsLoggedIn(true);
     } else {
       console.log(users);
@@ -57,10 +57,6 @@ function Login({ toggleForm }) {
 
   return (
     <div className='login-container'>
-       {isLoggedIn ? ( // Conditionally render Home component if isLoggedIn is true
-        <Home />
-      ) :(
-        <>
       <h2>Login</h2>
       <form onSubmit={handleSubmit} className='login-form'>
         <div>
@@ -90,14 +86,11 @@ function Login({ toggleForm }) {
           <button type="submit">Login</button>
         </div>
       </form>
-      <div>
+      <div >
         Don't have an account?{' '}
-        <button onClick={toggleForm}>Sign up</button>
+        <Link className='Linkbtn' to={'/Signup'}>Sign up</Link>
       </div>
-      </>)}
     </div>
-
-    
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../components_css/Signup.css';
+import { Link } from 'react-router-dom';
 
 
 function Signup({ toggleForm }) {
@@ -102,7 +103,7 @@ function Signup({ toggleForm }) {
       </form>
       <div>
         Already have an account?{' '}
-        <button onClick={toggleForm}>Login</button>
+        <Link to="/" className='Linkbtn'>Login</Link>
       </div>
     </div>
   );
