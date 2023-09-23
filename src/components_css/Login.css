@@ -1,22 +1,27 @@
 /* Login.css */
+
+
+
 .login-container {
+    position: relative;
     background-color: #f0f0f0;
     /* padding: 20px; */
     padding: 3rem;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 12px 12px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
     margin: 20px auto;
-    background: linear-gradient(to left ,rgb(67, 103, 161),rgb(111, 74, 148));
+    background-image: url(../assets/cloudybgrd.jpg);
+    background-size: cover;
   }
   
   .login-container h2 {
-    font-size: 1.5rem;
+    
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 20px;
-    color: rgb(10, 19, 31);
-    font-size: 2rem;
+    color: rgb(64, 185, 255);
+    font-size: 3rem;
     cursor: default;
   }
   
@@ -29,10 +34,19 @@
     font-weight: bold;
     margin-bottom: 5px;
     cursor: pointer;
-    color: rgb(209, 226, 228);
+    color: rgb(255, 134, 64);
+    font-size: 19px;
     text-align: left;
-  }
-  
+  } 
+  .login-form label:hover {
+    
+    color: rgb(247, 107, 25);
+    font-size: 21px;
+  } 
+
+
+
+
   .login-form input[type="text"],
   .login-form input[type="password"],
   .login-form input[type="number"],
@@ -41,37 +55,79 @@
     padding: 10px;
     border: none;
 
+    background: linear-gradient(to left top ,magenta,pink);
     /* border: 1px solid #ccc; */
-    border-radius: 5px;
+    border-radius: 50px;
     outline: none;
     margin-bottom: 1.5rem;
   }
   
+  .login-form input[type="password"]:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to left top ,pink,magenta);
+   
+  }
+
+  .login-form input[type="text"]:hover   {
+    transform: scale(1.1);
+    background: linear-gradient(to left top ,pink,magenta);
+   
+  }
+  
+  
   .login-form button[type="submit"] {
-    background-color: #007bff;
+    background: linear-gradient(to left top ,orange,yellow);
     color: #fff;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .login-form button[type="submit"]:hover {
-    background-color: #0056b3;
+    background: linear-gradient(to left top ,yellow ,orange);
   }
   
   .Linkbtn {
-    background-color: #ccc;
-    color: #333;
-    padding: 10px;
+    
+    color: white;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    background: linear-gradient(to left top ,orange,yellow);
     transition: background-color 0.3s ease;
   }
   
   .Linkbtn:hover {
-    background-color: #999;
+    background: linear-gradient(to left top ,yellow ,orange);
   }
   
+  .switchingmsg{
+    color: #000;
+    font-weight: 500;
+  }
+
+
+
+  .imgofBee{
+    width: 7rem;
+    height: 8rem;
+    position: absolute;
+    top:1;
+    right:0;
+    
+  }
+  .imgofBee:hover{
+    transform: scale(1.1);
+    transform: rotate3d(60deg);
+    
+  }
+  /* .imgofVegeis{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top:0;
+    left: 0;
+  } */

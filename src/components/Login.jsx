@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../components_css/Login.css';
+import trBee from '../assets/transparentBee.png';
+// import trVeg from '../assets/transparentvegeis.png';
 import Home from "./Home";
 
 
@@ -31,8 +33,9 @@ function Login({ toggleForm }) {
 
     if (isUserValid) {
       // Redirect to the Home component upon successful login
-      
-      navigate.push('/Home');
+      console.log(users);
+      console.log(formData);
+      navigate('/Home');
       setIsLoggedIn(true);
     } else {
       console.log(users);
@@ -52,11 +55,13 @@ function Login({ toggleForm }) {
 
   useEffect(()=>{
     getUsers();
-  },[formData])
+  },[])
   
 
   return (
     <div className='login-container'>
+      <img src={trBee} className='imgofBee'/>
+      {/* <img src={trVeg} className='imgofVegeis'/> */}
       <h2>Login</h2>
       <form onSubmit={handleSubmit} className='login-form'>
         <div>
@@ -86,7 +91,7 @@ function Login({ toggleForm }) {
           <button type="submit">Login</button>
         </div>
       </form>
-      <div >
+      <div className='switchingmsg'>
         Don't have an account?{' '}
         <Link className='Linkbtn' to={'/Signup'}>Sign up</Link>
       </div>
